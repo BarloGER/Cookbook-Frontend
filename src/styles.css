@@ -1,0 +1,37 @@
+.App {
+	font-family: sans-serif;
+	text-align: center;
+}
+
+nav {
+	display: flex;
+	padding: 0.5rem 1rem;
+	justify-content: center;
+}
+
+a {
+	list-style-type: none;
+	text-decoration: none;
+	color: white;
+	width: 80px;
+	padding: 0.5rem;
+	margin: 1rem;
+	background: lightblue;
+	box-shadow: 1px 1px 1px 1px grey;
+}
+a:hover {
+	background: rgb(59, 170, 211);
+	cursor: pointer;
+	box-shadow: 5px 5px 5px grey;
+}
+
+.component-container {
+	border: solid 1px grey;
+	margin: 2rem auto;
+	padding: 2rem;
+	background: lightgrey;
+}
+
+.active {
+	background: lightcoral;
+}

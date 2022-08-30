@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, NavLink } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import './styles.css';
+import Home from './Components/Home';
+import RecipeOverview from './Components/RecipeOverview';
+import Recipe from './Components/Recipe';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+	const myPosts = [
+		{ id: 1, name: 'one', title: 'Lorem Ipsum Title' },
+		{ id: 2, name: 'two', title: 'Lorem Ipsum Title 2' },
+		{
+			id: 3,
+			name: 'three',
+			title: 'Lorem Ipsum Title 3'
+		}
+	];
+
+	return (
+		<div className="App">
+			<nav>
+				<NavLink to="/">
+					<li>Home</li>
+				</NavLink>
+				<NavLink to="/posts">
+					<li>Rezepte</li>
+				</NavLink>
+			</nav>
+
+			<Routes>
+				<Route path="/" element={<Home myPosts={myPosts} />} />
+				<Route path="posts" element={<RecipeOverview myPosts={myPosts} />} />
+				<Route path="posts/:id" element={<Recipe myPosts={myPosts} />} />
+				<Route path="error" element={<div>oops, something went wrong.</div>} />
+				<Route path="*" element={<div>not found</div>} />
+			</Routes>
+		</div>
+	);
 }
 
-export default App;
