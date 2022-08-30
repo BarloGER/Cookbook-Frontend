@@ -1,13 +1,17 @@
-import { Link } from 'react-router-dom';
 
-export default function RecipeOverview({ myPosts }) {
-	console.log(myPosts);
+
+export default function RecipeOverview(props) {
+	const { id, postAuthor, postDate, postDifficulty, 
+		postRecipeImage, postTime, postTitle } = props
 	return (
-		<div className="component-container">
-			<h3>All Posts</h3>
-			{myPosts.map((post) => {
-				return <Link to={`/posts/${post.id}`}>Article {post.name}</Link>;
-			})}
-		</div>
-	);
+		<div className="cardContainer" style={{ backgroundImage: `url(${postRecipeImage})` }}>
+            <div className="textContainer">
+                <h2>{postTitle}</h2>
+                <p>{postTime}</p>
+                <p>{postDifficulty}</p>
+                <p>{postAuthor}</p>
+                <p>{postDate}</p>
+            </div>
+        </div>
+	)
 }
