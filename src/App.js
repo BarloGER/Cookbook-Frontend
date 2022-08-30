@@ -1,40 +1,72 @@
 import { Routes, Route, NavLink } from 'react-router-dom';
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import './styles.css';
 import Home from './Components/Home';
 import RecipeOverview from './Components/RecipeOverview';
 import Recipe from './Components/Recipe';
+import { client } from './client';
 
 export default function App() {
-	const myPosts = [
-		{ id: 1, name: 'one', title: 'Lorem Ipsum Title' },
-		{ id: 2, name: 'two', title: 'Lorem Ipsum Title 2' },
-		{
-			id: 3,
-			name: 'three',
-			title: 'Lorem Ipsum Title 3'
-		}
-	];
+  
+    const[isPostsLoading, setIsPostsLoading] = useState(false)
+    const [posts, setPosts] = useState([])
 
-	return (
-		<div className="App">
-			<nav>
-				<NavLink to="/">
-					<li>Home</li>
-				</NavLink>
-				<NavLink to="/posts">
-					<li>Rezepte</li>
-				</NavLink>
-			</nav>
 
-			<Routes>
-				<Route path="/" element={<Home myPosts={myPosts} />} />
-				<Route path="posts" element={<RecipeOverview myPosts={myPosts} />} />
-				<Route path="posts/:id" element={<Recipe myPosts={myPosts} />} />
-				<Route path="error" element={<div>oops, something went wrong.</div>} />
-				<Route path="*" element={<div>not found</div>} />
-			</Routes>
-		</div>
-	);
-}
+    // Filter Data updatedPost saved in cleanPosts
+    const cleanUpPosts = useCallback((rawData) => {
+      const cleanPosts = rawData.map((post) => {
+        const {sys, fields} = post
+        const {id} = sys
+        const postAuthor = fields.author
+        const postDate = fields.date
+        const postDifficulty = fields.difficulty
+        const postRecipeImage = fields.recipeImage.fields.file.url
+        const postTime = fields.time
+        const postTitle = fields.title
+        const updatedPost = {id, postAuthor, postDate, postDifficulty,
+          postRecipeImage, postTime, postTitle}
+        return updatedPost
+      })
+
+      setPosts(cleanPosts)
+    }, [])
+
+
+    // Fetch
+    const getPosts = useCallback(async () => {
+      setIsPostsLoading(true)
+      try {
+        const response = await client.getEntries({ content_type: 'recipe' })
+        const responseData = response.items
+        if (responseData) {
+          cleanUpPosts(responseData)
+        } else {
+            setPosts([])
+        }
+        setIsPostsLoading(false)
+      } catch (err) {
+        console.log(err)
+        setIsPostsLoading(false)
+      }
+    }, [cleanUpPosts])
+
+    useEffect(() => {
+        getPosts()
+    },  [getPosts])
+    
+    console.log(posts)
+
+    return (
+      <div>
+        {posts.map((item) => {
+          const { id, postAuthor, postDate, postDifficulty, 
+            postRecipeImage, postTime, postTitle } = item
+            return (
+               <RecipeOverview key={id} postAuthor={postAuthor} postDate={postDate} postDifficulty={postDifficulty} 
+               postRecipeImage={postRecipeImage} postTime={postTime} postTitle={postTitle}/>
+            )
+        })}
+      </div>
+    );
+  }
 
