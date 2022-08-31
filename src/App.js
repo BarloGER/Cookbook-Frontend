@@ -1,10 +1,12 @@
-import { Routes, Route, Link, NavLink } from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import { useState, useEffect, useCallback } from "react";
-import './styles.css';
-import Home from './Components/Home';
-import RecipeOverview from './Components/RecipeOverview';
-import Recipe from './Components/Recipe';
 import { client } from './client';
+import Home from "./Components/Home";
+import Navbar from "./Components/Navbar";
+import AllPosts from './Components/AllPosts';
+import RecipeOverview from "./Components/RecipeOverview";
+
+
 
 export default function App() {
   
@@ -58,24 +60,20 @@ export default function App() {
 
     return (
       <>
-        <div>
-          <nav>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="RecipeOverview">Rezeptübersicht</NavLink>
-          </nav>
+        <Navbar />
 
-          <Routes>
-
-          </Routes>
-        </div>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/RecipeOverview" element={<RecipeOverview />} />
+            </Routes>
 
         <div>
           {posts.map((item) => {
             const { id, postAuthor, postDate, postDifficulty, 
               postRecipeImage, postTime, postTitle } = item
               return (
-                <RecipeOverview key={id} postAuthor={postAuthor} postDate={postDate} postDifficulty={postDifficulty} 
-                postRecipeImage={postRecipeImage} postTime={postTime} postTitle={postTitle}/>
+                <AllPosts key={id} postAuthor={postAuthor} postDate={postDate} postDifficulty={postDifficulty} 
+                postRecipeImage={postRecipeImage} postTime={postTime} postTitle={postTitle} />
               )
           })}
         </div>
