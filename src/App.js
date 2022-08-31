@@ -1,4 +1,4 @@
-import { Routes, Route, NavLink } from 'react-router-dom';
+import { Routes, Route, Link, NavLink } from 'react-router-dom';
 import { useState, useEffect, useCallback } from "react";
 import './styles.css';
 import Home from './Components/Home';
@@ -57,16 +57,29 @@ export default function App() {
     console.log(posts)
 
     return (
-      <div>
-        {posts.map((item) => {
-          const { id, postAuthor, postDate, postDifficulty, 
-            postRecipeImage, postTime, postTitle } = item
-            return (
-               <RecipeOverview key={id} postAuthor={postAuthor} postDate={postDate} postDifficulty={postDifficulty} 
-               postRecipeImage={postRecipeImage} postTime={postTime} postTitle={postTitle}/>
-            )
-        })}
-      </div>
+      <>
+        <div>
+          <nav>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="RecipeOverview">Rezeptübersicht</NavLink>
+          </nav>
+
+          <Routes>
+
+          </Routes>
+        </div>
+
+        <div>
+          {posts.map((item) => {
+            const { id, postAuthor, postDate, postDifficulty, 
+              postRecipeImage, postTime, postTitle } = item
+              return (
+                <RecipeOverview key={id} postAuthor={postAuthor} postDate={postDate} postDifficulty={postDifficulty} 
+                postRecipeImage={postRecipeImage} postTime={postTime} postTitle={postTitle}/>
+              )
+          })}
+        </div>
+      </>
     );
   }
 

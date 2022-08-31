@@ -1,37 +1,42 @@
-.App {
-	font-family: sans-serif;
-	text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav {
-	display: flex;
-	padding: 0.5rem 1rem;
-	justify-content: center;
+.main {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 20px;
 }
 
-a {
-	list-style-type: none;
-	text-decoration: none;
-	color: white;
-	width: 80px;
-	padding: 0.5rem;
-	margin: 1rem;
-	background: lightblue;
-	box-shadow: 1px 1px 1px 1px grey;
-}
-a:hover {
-	background: rgb(59, 170, 211);
-	cursor: pointer;
-	box-shadow: 5px 5px 5px grey;
+.thumb {
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center center;
 }
 
-.component-container {
-	border: solid 1px grey;
-	margin: 2rem auto;
-	padding: 2rem;
-	background: lightgrey;
+.cardContainer {
+    height: 400px;
+    width: 300px;
+    background: white;
+    text-decoration: none;
+    color: #444;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+    top: 0;
+    transition: all .1s ease-in;
 }
 
-.active {
-	background: lightcoral;
+.cardContainer:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+  }
+
+/* Utilities */
+.border {
+    border: 1px solid red;
 }
