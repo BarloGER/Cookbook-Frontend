@@ -1,13 +1,16 @@
+import { Link } from "react-router-dom";
 import "./allPosts.css";
 
 
-export default function RecipeOverview(props) {
+export default function AllPosts(props) {
 	const { id, postAuthor, postDate, postDifficulty, 
 		postRecipeImage, postTime, postTitle } = props
 
 	return (
         <>
             <div className="main border">
+
+                <Link to={`/Recipe`}>
                 <div className="cardContainer border">
                     <div className="thumb" style={{ backgroundImage: `url(${postRecipeImage})` }}>
 
@@ -20,6 +23,7 @@ export default function RecipeOverview(props) {
                         <p>{postDate}</p>
                     </div>
                 </div>
+                </Link>
             </div>
         </>
 	)

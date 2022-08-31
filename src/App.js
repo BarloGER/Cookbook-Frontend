@@ -1,10 +1,10 @@
 import { Route, Routes} from 'react-router-dom';
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useParam, useCallback } from "react";
 import { client } from './client';
 import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
-import AllPosts from './Components/AllPosts';
 import RecipeOverview from "./Components/RecipeOverview";
+import Recipe from "./Components/Recipe";
 
 
 
@@ -63,20 +63,13 @@ export default function App() {
         <Navbar />
 
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/RecipeOverview" element={<RecipeOverview />} />
+              <Route path="/" element={<Home posts = {posts.slice(0, 8)}/>} />
+              <Route path="/RecipeOverview" element={<RecipeOverview posts = {posts}/>} />
+              <Route path="/Recipe/:id" element={<Recipe />} />
+              <Route path="*" element={<div>404 Seite nicht gefunden</div>} />
             </Routes>
 
-        <div>
-          {posts.map((item) => {
-            const { id, postAuthor, postDate, postDifficulty, 
-              postRecipeImage, postTime, postTitle } = item
-              return (
-                <AllPosts key={id} postAuthor={postAuthor} postDate={postDate} postDifficulty={postDifficulty} 
-                postRecipeImage={postRecipeImage} postTime={postTime} postTitle={postTitle} />
-              )
-          })}
-        </div>
+        
       </>
     );
   }
