@@ -7,24 +7,23 @@ export default function AllPosts(props) {
 		postRecipeImage, postTime, postTitle } = props
 
 	return (
-        <>
-            <div className="main border">
+        <div className="main">
+            {/* {props.map(() => {
+                return <Link to={`/recipe/${props.id}`}></Link>
+            })} */}
+            <Link to={`/Recipe/:id`}>
+            <div className="cardContainer">
+                <div className="thumb" style={{ backgroundImage: `url(${postRecipeImage})` }}>
 
-                <Link to={`/Recipe`}>
-                <div className="cardContainer border">
-                    <div className="thumb" style={{ backgroundImage: `url(${postRecipeImage})` }}>
-
-                    </div>
-                    <div className="textContainer border">
-                        <h2>{postTitle}</h2>
-                        <p>{postTime}</p>
-                        <p>{postDifficulty}</p>
-                        <p>{postAuthor}</p>
-                        <p>{postDate}</p>
-                    </div>
                 </div>
-                </Link>
+                <article className="textContainer">
+                    <h2>{postTitle}</h2>
+                    <p>Benötigte Zeit: {postTime}</p>
+                    <p>Schwierigkeit: {postDifficulty}</p>
+                    <span>{postAuthor}</span>
+                </article>
             </div>
-        </>
+            </Link>
+        </div>
 	)
 }
