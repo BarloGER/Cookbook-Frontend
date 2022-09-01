@@ -9,9 +9,6 @@ export default function AllPosts(props) {
 
 	return (
         <div className="main">
-            {/* {props.map(() => {
-                return <Link to={`/recipe/${props.id}`}></Link>
-            })} */}
             <Link to={`/Recipe/${postId}`}>
             <div className="cardContainer">
                 <div className="thumb" style={{ backgroundImage: `url(${postRecipeImage})` }}>

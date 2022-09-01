@@ -65,7 +65,7 @@ export default function App() {
         <Navbar />
 
             <Routes>
-              <Route path="/" element={<Home posts = {posts.slice(0, 8)}/>} />
+              <Route path="/" element={<Home posts = {posts.slice(0, 7)}/>} />
               <Route path="/RecipeOverview" element={<RecipeOverview posts = {posts}/>} />
               <Route path="/Recipe/:id" element={<Recipe posts = {posts}/>} />
               <Route path="*" element={<div>404 Seite nicht gefunden</div>} />
@@ -75,4 +75,3 @@ export default function App() {
       </>
     );
   }
-

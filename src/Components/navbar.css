@@ -15,6 +15,7 @@
   color: black;
   font-size: 1.3rem;
   margin-left: 1rem;
+
 }
 
 .navigation-menu {
@@ -100,4 +101,3 @@
     z-index: 1;
     transition: all .2s ease-out;
   }
-}
