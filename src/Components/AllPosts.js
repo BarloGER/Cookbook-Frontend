@@ -5,6 +5,7 @@ import "./allPosts.css";
 export default function AllPosts(props) {
 	const { postId, postAuthor, postDate, postDifficulty, 
 		postRecipeImage, postTime, postTitle } = props
+        console.log(props)
 
 	return (
         <div className="main">

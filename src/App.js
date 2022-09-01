@@ -1,5 +1,5 @@
 import { Route, Routes} from 'react-router-dom';
-import { useState, useEffect, useParam, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { client } from './client';
 import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";

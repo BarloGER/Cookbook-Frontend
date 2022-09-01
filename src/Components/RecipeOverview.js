@@ -2,7 +2,6 @@ import AllPosts from "./AllPosts";
 import "./recipeOverview.css";
 
 export default function RecipeOverview({posts}) {
-  console.log(posts);
     return (
         <main>
           {posts && posts.map((item) => {
