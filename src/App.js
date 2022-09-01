@@ -21,12 +21,14 @@ export default function App() {
         const {id} = sys
         const postAuthor = fields.author
         const postDate = fields.date
+        const postDescription = fields.description
         const postDifficulty = fields.difficulty
+        const postIngredients = fields.ingredients
         const postRecipeImage = fields.recipeImage.fields.file.url
         const postTime = fields.time
         const postTitle = fields.title
-        const updatedPost = {id, postAuthor, postDate, postDifficulty,
-          postRecipeImage, postTime, postTitle}
+        const updatedPost = {id, postAuthor, postDate, postDescription, postDifficulty,
+          postIngredients, postRecipeImage, postTime, postTitle}
         return updatedPost
       })
 

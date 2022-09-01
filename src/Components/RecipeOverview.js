@@ -1,9 +1,10 @@
 import AllPosts from "./AllPosts";
+import "./recipeOverview.css";
 
 export default function RecipeOverview({posts}) {
   console.log(posts);
     return (
-        <div>
+        <main>
           {posts && posts.map((item) => {
             // destructure item
             const { id, postAuthor, postDate, postDifficulty, 
@@ -15,6 +16,6 @@ export default function RecipeOverview({posts}) {
                 </>
               )
           })}
-        </div>
+        </main>
     )
 }

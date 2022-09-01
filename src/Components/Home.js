@@ -1,9 +1,10 @@
 import AllPosts from "./AllPosts";
+import "./home.css";
 
 export default function Home({posts}) {
   console.log(posts);
     return (
-        <div>
+        <main>
           {posts && posts.map((item) => {
             // destructure item
             const { id, postAuthor, postDate, postDifficulty, 
@@ -15,6 +16,6 @@ export default function Home({posts}) {
                 </>
               )
           })}
-        </div>
+        </main>
     )
 }
