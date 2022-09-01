@@ -11,7 +11,7 @@ export default function Home({posts}) {
               postRecipeImage, postTime, postTitle } = item 
               return (
                 <>
-                  <AllPosts key={id} postAuthor={postAuthor} postDate={postDate} postDifficulty={postDifficulty} 
+                  <AllPosts key={id} postId={id} postAuthor={postAuthor} postDate={postDate} postDifficulty={postDifficulty} 
                 postRecipeImage={postRecipeImage} postTime={postTime} postTitle={postTitle} />
                 </>
               )

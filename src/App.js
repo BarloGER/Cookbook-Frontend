@@ -1,5 +1,5 @@
 import { Route, Routes} from 'react-router-dom';
-import { useState, useEffect, useParam, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { client } from './client';
 import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
@@ -67,7 +67,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home posts = {posts.slice(0, 8)}/>} />
               <Route path="/RecipeOverview" element={<RecipeOverview posts = {posts}/>} />
-              <Route path="/Recipe/:id" element={<Recipe />} />
+              <Route path="/Recipe/:id" element={<Recipe posts = {posts}/>} />
               <Route path="*" element={<div>404 Seite nicht gefunden</div>} />
             </Routes>
 
