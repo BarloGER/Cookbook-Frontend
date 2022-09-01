@@ -21,12 +21,14 @@ export default function App() {
         const {id} = sys
         const postAuthor = fields.author
         const postDate = fields.date
+        const postDescription = fields.description
         const postDifficulty = fields.difficulty
+        const postIngredients = fields.ingredients
         const postRecipeImage = fields.recipeImage.fields.file.url
         const postTime = fields.time
         const postTitle = fields.title
-        const updatedPost = {id, postAuthor, postDate, postDifficulty,
-          postRecipeImage, postTime, postTitle}
+        const updatedPost = {id, postAuthor, postDate, postDescription, postDifficulty,
+          postIngredients, postRecipeImage, postTime, postTitle}
         return updatedPost
       })
 
@@ -63,9 +65,9 @@ export default function App() {
         <Navbar />
 
             <Routes>
-              <Route path="/" element={<Home posts = {posts.slice(0, 8)}/>} />
+              <Route path="/" element={<Home posts = {posts.slice(0, 7)}/>} />
               <Route path="/RecipeOverview" element={<RecipeOverview posts = {posts}/>} />
-              <Route path="/Recipe/:id" element={<Recipe />} />
+              <Route path="/Recipe/:id" element={<Recipe posts = {posts}/>} />
               <Route path="*" element={<div>404 Seite nicht gefunden</div>} />
             </Routes>
 
@@ -73,4 +75,3 @@ export default function App() {
       </>
     );
   }
-

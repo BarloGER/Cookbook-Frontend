@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px;
+    gap: 20px;
+}
+
+main>* {
+    flex: 2 0 21%;
+  }
