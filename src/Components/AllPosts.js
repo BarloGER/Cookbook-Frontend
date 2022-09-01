@@ -3,15 +3,16 @@ import "./allPosts.css";
 
 
 export default function AllPosts(props) {
-	const { id, postAuthor, postDate, postDifficulty, 
+	const { postId, postAuthor, postDate, postDifficulty, 
 		postRecipeImage, postTime, postTitle } = props
+        console.log(props)
 
 	return (
         <div className="main">
             {/* {props.map(() => {
                 return <Link to={`/recipe/${props.id}`}></Link>
             })} */}
-            <Link to={`/Recipe/:id`}>
+            <Link to={`/Recipe/${postId}`}>
             <div className="cardContainer">
                 <div className="thumb" style={{ backgroundImage: `url(${postRecipeImage})` }}>
 
