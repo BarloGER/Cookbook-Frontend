@@ -18,6 +18,10 @@
 
 }
 
+a {
+  color: white;
+}
+
 .navigation-menu {
   margin-left: auto;
 }
@@ -86,7 +90,7 @@
     margin: 0;
   }
 
-  .NavLink {
+  a {
     color: black;
     width: 100%;
     padding: 1.5rem 0;
