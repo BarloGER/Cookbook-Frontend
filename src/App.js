@@ -5,6 +5,7 @@ import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
 import RecipeOverview from "./Components/RecipeOverview";
 import Recipe from "./Components/Recipe";
+import AboutUs from './AboutUs';
 
 
 
@@ -68,6 +69,7 @@ export default function App() {
               <Route path="/" element={<Home posts = {posts.slice(0, 7)}/>} />
               <Route path="/RecipeOverview" element={<RecipeOverview posts = {posts}/>} />
               <Route path="/Recipe/:id" element={<Recipe posts = {posts}/>} />
+              <Route path="/AboutUs" element={<AboutUs posts = {posts}/>}/>
               <Route path="*" element={<div>404 Seite nicht gefunden</div>} />
             </Routes>
 

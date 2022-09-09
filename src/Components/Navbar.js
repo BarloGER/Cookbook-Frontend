@@ -34,6 +34,9 @@ export default function Navbar() {
             <NavLink to="/RecipeOverview">
                 <li>Rezeptübersicht</li>
             </NavLink>
+            <NavLink to="/AboutUs">
+              <li>Über Uns</li>
+            </NavLink>
         </ul>
       </div>
     </nav>
