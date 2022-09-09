@@ -10,10 +10,10 @@ export default function Home({posts}) {
             const { id, postAuthor, postDate, postDifficulty, 
               postRecipeImage, postTime, postTitle } = item 
               return (
-                <>
+                <div>
                   <AllPosts key={id} postId={id} postAuthor={postAuthor} postDate={postDate} postDifficulty={postDifficulty} 
-                postRecipeImage={postRecipeImage} postTime={postTime} postTitle={postTitle} />
-                </>
+                  postRecipeImage={postRecipeImage} postTime={postTime} postTitle={postTitle} />
+                </div>
               )
           })}
         </main>

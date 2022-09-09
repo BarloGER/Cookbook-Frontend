@@ -3,7 +3,7 @@ import "./allPosts.css";
 
 
 export default function AllPosts(props) {
-	const { postId, postAuthor, postDate, postDifficulty, 
+	const { postId, postAuthor, postDate, postDescription, postDifficulty, postIngredients,
 		postRecipeImage, postTime, postTitle } = props
         console.log(props)
 
