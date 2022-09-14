@@ -1,4 +1,4 @@
-/* General styling for every card
+ /* General styling for every card
 
 * {
     margin: 0;
@@ -49,9 +49,18 @@
   
   a {
   text-decoration: none;
-  }
+  } */
   
   /* Utilities */
   /* .border {
     border: 1px solid red;
   } */ 
+
+/* .left-box{
+  background-color: antiquewhite;
+  max-width: 50%;
+  border-radius: 10px;
+} */
+#bild{
+ margin-top: 10px;
+}

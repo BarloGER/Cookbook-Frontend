@@ -34,7 +34,7 @@ export default function Navbar() {
             <NavLink to="/RecipeOverview" onClick={() => setIsNavExpanded(false)}>
                 <li>Rezeptübersicht</li>
             </NavLink>
-            <NavLink to="/AboutUs">
+            <NavLink to="/AboutUs" onClick={() => setIsNavExpanded(false)}>
               <li>Über Uns</li>
             </NavLink>
         </ul>

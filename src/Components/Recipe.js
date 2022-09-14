@@ -11,15 +11,16 @@ export default function Recipe({ posts }) {
 
         <div className="main"> {thisPost ?
             <div className="">
-            <div className="thumb" style={{ backgroundImage: `url(${thisPost.postRecipeImage})` }}>
+            <div id="bild" className="thumb" style={{ backgroundImage: `url(${thisPost.postRecipeImage})` }}>
 
             </div>
             <article className="textContainer">
                 <h2>{thisPost.postTitle}</h2><br/>
-
+                    
                 <div className="left-box">
                     <p>Benötigte Zeit: {thisPost.postTime}</p>
                     <p>Schwierigkeit: {thisPost.postDifficulty}</p>
+                    <br/>
                     <div className="ingredients">
                         <h3>{thisPost.postIngredients.content[0].content[0].value}</h3><br/>
                         <ul>
@@ -32,6 +33,7 @@ export default function Recipe({ posts }) {
                 
                 <div className="right-box">
                     <div className="description">
+                        <br/>
                         <h3>{thisPost.postDescription.content[0].content[0].value}</h3><br/>
                         <ol>
                             {myDescription.length && myDescription.map((element) => {
