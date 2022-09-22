@@ -3,10 +3,11 @@ import "./recipe.css";
 
 export default function Recipe({ posts }) {
   const { id } = useParams();
-  const thisPost = posts.length && posts.find((post) => post.id == id);
+  const thisPost = posts.length && posts.find((post) => post.Recipe_id == id);
   const myDescription = thisPost && thisPost.description;
   const myIngredients = thisPost && thisPost.ingredients;
-
+  console.log(posts);
+  console.log(thisPost);
   return (
     <div className="main">
       {" "}
@@ -31,7 +32,7 @@ export default function Recipe({ posts }) {
                 <ul>
                   {myIngredients.length &&
                     myIngredients.map((element) => {
-                      return <li>{element.ingredients.value}</li>;
+                      return <li>{element}</li>;
                     })}
                 </ul>
               </div>
@@ -45,7 +46,7 @@ export default function Recipe({ posts }) {
                 <ol>
                   {myDescription.length &&
                     myDescription.map((element) => {
-                      return <li>{element.description.value}</li>;
+                      return <li>{element}</li>;
                     })}
                 </ol>
               </div>
