@@ -39,32 +39,44 @@ export default function CreateRecipe() {
 
         <label>
           Benötigte Zeit:
-          <input name="number" onChange={handleChange}></input>
+          <input
+            type="number"
+            name="requiredTime"
+            onChange={handleChange}
+          ></input>
         </label>
 
         <label>
           Schwierigkeit:
-          <input name="text" onChange={handleChange}></input>
+          <input type="text" name="difficulty" onChange={handleChange}></input>
         </label>
 
         <label>
           Autor:
-          <input name="text" onChange={handleChange}></input>
+          <input type="text" name="author" onChange={handleChange}></input>
         </label>
 
         <label>
           Datum:
-          <input name="number" onChange={handleChange}></input>
-        </label>
-
-        <label>
-          Zutaten:
-          <textarea name="number" onChange={handleChange}></textarea>
+          <input type="number" name="date" onChange={handleChange}></input>
         </label>
 
         <label>
           Beschreibung:
-          <textarea name="number" onChange={handleChange}></textarea>
+          <textarea
+            type="text"
+            name="description"
+            onChange={handleChange}
+          ></textarea>
+        </label>
+
+        <label>
+          Zutaten:
+          <textarea
+            type="text"
+            name="ingredients"
+            onChange={handleChange}
+          ></textarea>
         </label>
 
         <div className="terms">
