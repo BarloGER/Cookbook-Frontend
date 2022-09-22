@@ -58,7 +58,7 @@ export default function CreateRecipe() {
 
         <label>
           Datum:
-          <input type="number" name="date" onChange={handleChange}></input>
+          <input type="text" name="date" onChange={handleChange}></input>
         </label>
 
         <label>
