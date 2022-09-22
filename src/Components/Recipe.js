@@ -14,7 +14,7 @@ export default function Recipe({ posts }) {
       {thisPost ? (
         <div className="">
           <div
-            id="bild"
+            id="picture"
             className="thumb"
             style={{ backgroundImage: `url(${thisPost.image})` }}
           ></div>
