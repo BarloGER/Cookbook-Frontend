@@ -9,9 +9,9 @@ import CreateRecipe from "./Components/CreateRecipe";
 
 export default function App() {
   const [posts, setPosts] = useState([]);
-  const URI = "https://cookbook-api.onrender.com";
+  const API = "https://cookbook-api.onrender.com";
   useEffect(() => {
-    fetch(URI)
+    fetch(API)
       .then((res) => res.json())
       .then((data) => setPosts(data))
       .catch((err) => console.log(err));
