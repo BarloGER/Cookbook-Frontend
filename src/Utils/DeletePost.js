@@ -1,7 +1,7 @@
-export const CreatePost = async (formData) => {
+export const DeletePost = async (formData) => {
   try {
     const res = await fetch("http://localhost:8080/", {
-      method: "POST",
+      method: "DELETE",
       body: JSON.stringify(formData),
       headers: {
         "Content-type": "application/json; charset=UTF-8",

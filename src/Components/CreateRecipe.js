@@ -5,9 +5,21 @@ import "./createRecipe.css";
 export default function CreateRecipe() {
   const [inputs, setInputs] = useState({});
 
+  const checkForPlus = (test3) => {
+    if (test3.includes("+")) {
+      test3 = test3.split("+");
+      test3.toString();
+    }
+    return test3;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      let test1 = inputs.description;
+      let test2 = inputs.ingredients;
+      inputs.description = checkForPlus(test1);
+      inputs.ingredients = checkForPlus(test2);
       const { post, error } = await CreatePost(inputs);
       if (error) throw error;
       console.log(post);

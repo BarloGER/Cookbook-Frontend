@@ -50,6 +50,9 @@ export default function Navbar() {
           <NavLink to="/CreateRecipe" onClick={() => setIsNavExpanded(false)}>
             <li>Neues Rezept</li>
           </NavLink>
+          <NavLink to="/DeleteRecipe" onClick={() => setIsNavExpanded(false)}>
+            <li>Rezept löschen</li>
+          </NavLink>
         </ul>
       </div>
     </nav>

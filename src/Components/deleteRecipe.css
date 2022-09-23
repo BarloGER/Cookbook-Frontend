@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+fieldset {
+  font-family: sans-serif;
+  text-align: center;
+  max-width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+label {
+  text-align: left;
+  display: block;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+button {
+  color: #fff;
+  background: #f13;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#square {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+}
+
+.terms {
+  display: flex;
+  align-content: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
