@@ -25,7 +25,7 @@ export default function AllPosts(props) {
           ></div>
           <article className="textContainer">
             <h2>{title}</h2>
-            <p>Benötigte Zeit: {required_time}</p>
+            <p>Benötigte Zeit: {required_time} Minuten</p>
             <p>Schwierigkeit: {difficulty}</p>
             <span>{author}</span>
           </article>

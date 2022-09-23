@@ -6,9 +6,9 @@ export default function DeleteRecipe() {
   const [inputs, setInputs] = useState({});
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
     try {
       const { post, error } = await DeletePost(inputs);
+      e.preventDefault();
       if (error) throw error;
       console.log(post);
     } catch (err) {

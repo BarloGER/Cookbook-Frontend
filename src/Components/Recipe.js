@@ -23,7 +23,7 @@ export default function Recipe({ posts }) {
             <br />
 
             <div className="left-box">
-              <p>Benötigte Zeit: {thisPost.required_time}</p>
+              <p>Benötigte Zeit: {thisPost.required_time} Minuten</p>
               <p>Schwierigkeit: {thisPost.difficulty}</p>
               <br />
               <div className="ingredients">

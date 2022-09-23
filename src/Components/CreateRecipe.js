@@ -14,13 +14,13 @@ export default function CreateRecipe() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
     try {
       let test1 = inputs.description;
       let test2 = inputs.ingredients;
       inputs.description = checkForPlus(test1);
       inputs.ingredients = checkForPlus(test2);
       const { post, error } = await CreatePost(inputs);
+      e.preventDefault();
       if (error) throw error;
       console.log(post);
     } catch (err) {
@@ -74,7 +74,7 @@ export default function CreateRecipe() {
         </label>
 
         <label>
-          Beschreibung:
+          Beschreibung: Jeder neue Schritt muss durch ein + getrennt werden.
           <textarea
             type="text"
             name="description"
@@ -83,7 +83,7 @@ export default function CreateRecipe() {
         </label>
 
         <label>
-          Zutaten:
+          Zutaten: Jede neue Zutat muss durch ein + getrennt werden.
           <textarea
             type="text"
             name="ingredients"
