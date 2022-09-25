@@ -1,6 +1,6 @@
 export const CreatePost = async (formData) => {
   try {
-    const res = await fetch("http://localhost:8080/", {
+    const res = await fetch("https://cookbook-api.onrender.com", {
       method: "POST",
       body: JSON.stringify(formData),
       headers: {

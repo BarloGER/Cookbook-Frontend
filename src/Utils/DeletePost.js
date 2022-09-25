@@ -1,6 +1,6 @@
 export const DeletePost = async (formData) => {
   try {
-    const res = await fetch("http://localhost:8080/", {
+    const res = await fetch("https://cookbook-api.onrender.com", {
       method: "DELETE",
       body: JSON.stringify(formData),
       headers: {
