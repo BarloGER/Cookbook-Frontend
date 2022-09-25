@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CreatePost } from "../Utils/CreatePost";
-import "../Styles/createRecipe.css";
+import "../Styles/form.css";
 
 export default function CreateRecipe() {
   const [inputs, setInputs] = useState({});

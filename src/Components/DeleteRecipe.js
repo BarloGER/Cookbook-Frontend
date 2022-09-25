@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { DeletePost } from "../Utils/DeletePost";
-import "../Styles/createRecipe.css";
+import "../Styles/form.css";
 
 export default function DeleteRecipe() {
   const [inputs, setInputs] = useState({});

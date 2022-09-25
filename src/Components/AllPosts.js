@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../Styles/allPosts.css";
+import "../Styles/globalStyle.css";
 
 export default function AllPosts(props) {
   const {
@@ -16,14 +16,14 @@ export default function AllPosts(props) {
   console.log(props);
 
   return (
-    <div>
+    <>
       <Link to={`/Recipe/${Recipe_id}`}>
-        <div className="cardContainer">
+        <div className="card-container">
           <div
             className="thumb"
             style={{ backgroundImage: `url(${image})` }}
           ></div>
-          <article className="textContainer">
+          <article className="text-container">
             <h2>{title}</h2>
             <p>Benötigte Zeit: {required_time} Minuten</p>
             <p>Schwierigkeit: {difficulty}</p>
@@ -31,6 +31,6 @@ export default function AllPosts(props) {
           </article>
         </div>
       </Link>
-    </div>
+    </>
   );
 }

@@ -9,7 +9,7 @@ export default function Recipe({ posts }) {
   console.log(posts);
   console.log(thisPost);
   return (
-    <div className="main">
+    <div className="recipe">
       {" "}
       {thisPost ? (
         <div className="card">

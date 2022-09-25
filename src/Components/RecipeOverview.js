@@ -1,5 +1,5 @@
 import AllPosts from "./AllPosts";
-import "../Styles/recipeOverview.css";
+import "../Styles/globalStyle.css";
 
 export default function RecipeOverview({ posts }) {
   return (
@@ -18,7 +18,7 @@ export default function RecipeOverview({ posts }) {
           } = item;
 
           return (
-            <>
+            <div className="recipe-cards">
               <AllPosts
                 key={Recipe_id}
                 Recipe_id={Recipe_id}
@@ -29,7 +29,7 @@ export default function RecipeOverview({ posts }) {
                 required_time={required_time}
                 title={title}
               />
-            </>
+            </div>
           );
         })}
     </main>

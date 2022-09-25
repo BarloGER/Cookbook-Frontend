@@ -1,5 +1,5 @@
 import AllPosts from "./AllPosts";
-import "../Styles/home.css";
+import "../Styles/globalStyle.css";
 
 export default function Home({ posts }) {
   console.log(posts);
@@ -19,18 +19,20 @@ export default function Home({ posts }) {
           } = item;
 
           return (
-            <div>
-              <AllPosts
-                key={Recipe_id}
-                Recipe_id={Recipe_id}
-                author={author}
-                date={date}
-                difficulty={difficulty}
-                image={image}
-                required_time={required_time}
-                title={title}
-              />
-            </div>
+            <>
+              <div className="recipe-cards">
+                <AllPosts
+                  key={Recipe_id}
+                  Recipe_id={Recipe_id}
+                  author={author}
+                  date={date}
+                  difficulty={difficulty}
+                  image={image}
+                  required_time={required_time}
+                  title={title}
+                />
+              </div>
+            </>
           );
         })}
     </main>
