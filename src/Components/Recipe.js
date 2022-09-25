@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import "./recipe.css";
+import "../Styles/recipe.css";
 
 export default function Recipe({ posts }) {
   const { id } = useParams();

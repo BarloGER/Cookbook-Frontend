@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./allPosts.css";
+import "../Styles/allPosts.css";
 
 export default function AllPosts(props) {
   const {

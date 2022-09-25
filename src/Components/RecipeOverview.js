@@ -1,5 +1,5 @@
 import AllPosts from "./AllPosts";
-import "./recipeOverview.css";
+import "../Styles/recipeOverview.css";
 
 export default function RecipeOverview({ posts }) {
   return (

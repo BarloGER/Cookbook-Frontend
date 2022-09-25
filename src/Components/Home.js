@@ -1,5 +1,5 @@
 import AllPosts from "./AllPosts";
-import "./home.css";
+import "../Styles/home.css";
 
 export default function Home({ posts }) {
   console.log(posts);
