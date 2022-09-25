@@ -16,7 +16,7 @@ export default function AllPosts(props) {
   console.log(props);
 
   return (
-    <div className="main">
+    <div>
       <Link to={`/Recipe/${Recipe_id}`}>
         <div className="cardContainer">
           <div

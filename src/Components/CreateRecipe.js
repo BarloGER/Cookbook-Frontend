@@ -93,14 +93,14 @@ export default function CreateRecipe() {
 
         <div className="terms">
           <label>
-            Agree to terms
+            Ich bin mir sicher das alle Angaben korrekt sind.
             <input type="checkbox" name="terms" onChange={handleChange} />
           </label>
         </div>
-        <button>Submit</button>
+        <button>Abschicken</button>
       </form>
       <legend>
-        <h1>React Form 2</h1>
+        <h1>Neues Rezept</h1>
       </legend>
     </fieldset>
   );

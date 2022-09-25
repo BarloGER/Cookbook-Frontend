@@ -5,24 +5,22 @@
   height: 60px;
   width: 100%;
   padding: 0.5rem 0rem;
-  background-color: #94B49F;
+  background-color: #94b49f;
   color: black;
   border-radius: 25px;
   box-shadow: 0 2px 10px rgb(0 0 0 / 10%), 0 10px 15px rgb(0 0 0 / 20%);
-  margin-top: 10px;
+  margin: 10px;
 }
-
 
 .brand-name {
   text-decoration: none;
   color: black;
   font-size: 1.3rem;
   margin-left: 1rem;
-
 }
 
 a {
-  color: #94B49F;
+  color: #94b49f;
 }
 
 .navigation-menu {
@@ -33,7 +31,6 @@ a {
   display: flex;
   list-style: none;
   padding: 0;
-  margin-top: 10px;
 }
 
 .navigation-menu li {
@@ -42,7 +39,11 @@ a {
   border-radius: 50px;
   padding: 10px;
   box-sizing: border-box;
-  background-image: linear-gradient(45deg, rgba(255,255,255,0.6), rgba(255,255,255,0.6));
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.6)
+  );
   mix-blend-mode: hard-light;
 }
 
@@ -70,16 +71,15 @@ a {
 }
 
 .hamburger:hover {
-  background-color:  #CEE5D0;
+  background-color: #cee5d0;
 }
 
 .active {
-  color:  green;
+  color: green;
   list-style-type: none;
-  
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 720px) {
   .hamburger {
     display: block;
   }
@@ -114,6 +114,6 @@ a {
   .navigation-menu.expanded ul {
     display: block;
     z-index: 1;
-    transition: all .2s ease-out;
+    transition: all 0.2s ease-out;
   }
 }

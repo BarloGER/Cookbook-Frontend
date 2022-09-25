@@ -33,7 +33,7 @@ export default function DeleteRecipe() {
         </label>
         <div className="terms">
           <label>
-            Sind sie sicher, dass sie das Rezept löschen wollen?
+            Bist du sicher, das du das Rezept löschen willst?
             <input type="checkbox" name="confirm" onChange={handleChange} />
           </label>
         </div>
