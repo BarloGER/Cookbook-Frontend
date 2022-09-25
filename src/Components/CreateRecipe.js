@@ -41,59 +41,95 @@ export default function CreateRecipe() {
       <form onSubmit={handleSubmit}>
         <label>
           Bild URL:
-          <input type="text" name="image" onChange={handleChange} />
+          <input
+            type="text"
+            name="image"
+            placeholder="https://beispiel.url.de"
+            required
+            onChange={handleChange}
+          />
         </label>
 
         <label>
           Titel:
-          <input type="text" name="title" onChange={handleChange} />
+          <input
+            type="text"
+            name="title"
+            placeholder="Das Beispiel"
+            required
+            onChange={handleChange}
+          />
         </label>
 
         <label>
-          Benötigte Zeit: Nur Zahl
+          Benötigte Zeit:
           <input
             type="number"
             name="requiredTime"
+            placeholder="Nur Zahl, Beispiel 10"
+            required
             onChange={handleChange}
           ></input>
         </label>
 
         <label>
           Schwierigkeit:
-          <input type="text" name="difficulty" onChange={handleChange}></input>
+          <input
+            type="text"
+            name="difficulty"
+            placeholder="leicht, mittel oder schwer"
+            required
+            onChange={handleChange}
+          ></input>
         </label>
 
         <label>
           Autor:
-          <input type="text" name="author" onChange={handleChange}></input>
+          <input
+            type="text"
+            name="author"
+            placeholder="Max Mustermann"
+            required
+            onChange={handleChange}
+          ></input>
         </label>
 
         <label>
-          Datum: Formatierung YYYY-MM-DD
-          <input type="text" name="date" onChange={handleChange}></input>
+          Datum:
+          <input
+            type="text"
+            name="date"
+            placeholder="Format: YYYY-MM-DD"
+            required
+            onChange={handleChange}
+          ></input>
         </label>
 
         <label>
-          Beschreibung: Jeder neue Schritt muss durch ein + getrennt werden.
+          Beschreibung:
           <textarea
             type="text"
             name="description"
+            placeholder="Schritte durch + trennen. Beispiel: Apfel schälen + Apfel in kleine Stücke schneiden"
+            required
             onChange={handleChange}
           ></textarea>
         </label>
 
         <label>
-          Zutaten: Jede neue Zutat muss durch ein + getrennt werden.
+          Zutaten:
           <textarea
             type="text"
             name="ingredients"
+            placeholder="Zutaten durch + trennen. Beispiel: Zucker + Zimt"
+            required
             onChange={handleChange}
           ></textarea>
         </label>
 
         <div className="terms">
           <label>
-            Ich bin mir sicher, dass alle Angaben korrekt sind..
+            Ich bin mir sicher, dass alle Angaben korrekt sind.
             <input type="checkbox" name="terms" onChange={handleChange} />
           </label>
         </div>

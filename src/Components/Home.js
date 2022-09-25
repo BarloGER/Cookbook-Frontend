@@ -2,7 +2,6 @@ import AllPosts from "./AllPosts";
 import "../Styles/globalStyle.css";
 
 export default function Home({ posts }) {
-  console.log(posts);
   return (
     <main>
       {posts &&

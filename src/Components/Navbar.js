@@ -47,11 +47,8 @@ export default function Navbar() {
           <NavLink to="/AboutUs" onClick={() => setIsNavExpanded(false)}>
             <li>Über Uns</li>
           </NavLink>
-          <NavLink to="/CreateRecipe" onClick={() => setIsNavExpanded(false)}>
-            <li>Neues Rezept</li>
-          </NavLink>
-          <NavLink to="/DeleteRecipe" onClick={() => setIsNavExpanded(false)}>
-            <li>Rezept löschen</li>
+          <NavLink to="/Admin" onClick={() => setIsNavExpanded(false)}>
+            <li>Admin</li>
           </NavLink>
         </ul>
       </div>

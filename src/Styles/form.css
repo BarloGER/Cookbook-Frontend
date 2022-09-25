@@ -1,9 +1,10 @@
 fieldset {
   font-family: sans-serif;
   text-align: center;
-  max-width: 60%;
+  max-width: 90%;
   margin: 0 auto;
   text-align: center;
+  padding: 10px;
 }
 
 label {
@@ -29,6 +30,7 @@ button {
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 #square {
