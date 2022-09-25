@@ -10,7 +10,7 @@ import DeleteRecipe from "./Components/DeleteRecipe";
 
 export default function App() {
   const [posts, setPosts] = useState([]);
-  const API = "http://localhost:8080/";
+  const API = "https://cookbook-api.onrender.com";
   useEffect(() => {
     fetch(API)
       .then((res) => res.json())
