@@ -50,7 +50,7 @@ export default function CreateRecipe() {
         </label>
 
         <label>
-          Benötigte Zeit:
+          Benötigte Zeit: Nur Zahl
           <input
             type="number"
             name="requiredTime"
@@ -69,7 +69,7 @@ export default function CreateRecipe() {
         </label>
 
         <label>
-          Datum:
+          Datum: Formatierung YYYY-MM-DD
           <input type="text" name="date" onChange={handleChange}></input>
         </label>
 
@@ -93,7 +93,7 @@ export default function CreateRecipe() {
 
         <div className="terms">
           <label>
-            Ich bin mir sicher das alle Angaben korrekt sind.
+            Ich bin mir sicher, dass alle Angaben korrekt sind..
             <input type="checkbox" name="terms" onChange={handleChange} />
           </label>
         </div>
