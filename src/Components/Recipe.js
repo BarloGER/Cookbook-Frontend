@@ -3,13 +3,13 @@ import "../Styles/recipe.css";
 
 export default function Recipe({ posts }) {
   const { id } = useParams();
-  const thisPost = posts.length && posts.find((post) => post.Recipe_id === id);
+  const thisPost = posts.length && posts.find((post) => post.Recipe_id == id);
   const myDescription = thisPost && thisPost.description;
   const myIngredients = thisPost && thisPost.ingredients;
   console.log(posts);
   console.log(thisPost);
   return (
-    <div className="recipe">
+    <main className="recipe">
       {" "}
       {thisPost ? (
         <div className="card">
@@ -52,14 +52,12 @@ export default function Recipe({ posts }) {
                 </ol>
               </div>
             </div>
-            {thisPost && posts.map((item) => {
-              return <div>{item}</div>;
-            })}
+            {thisPost && posts.map((item) =>  {})}
           </article>
         </div>
       ) : (
         "not found"
       )}
-    </div>
+    </main>
   );
 }

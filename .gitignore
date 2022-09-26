@@ -18,7 +18,9 @@
 .env.development
 .env.test.local
 .env.production.local
+/vars
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
