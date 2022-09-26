@@ -52,11 +52,7 @@ export default function Recipe({ posts }) {
                 </ol>
               </div>
             </div>
-<<<<<<< HEAD
             {thisPost && posts.map((item) =>  {})}
-=======
-            {thisPost && posts.map((item) => {})}
->>>>>>> 68f8624f9f950bec2fb2ed3c896f6ba055afe1a4
           </article>
         </div>
       ) : (
