@@ -6,10 +6,13 @@
 }
 
 main {
+  background-color: #D1E8E4;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 20px;
+  margin: 30px;
+  padding: 50px;
   gap: 20px;
 }
 
@@ -27,7 +30,7 @@ main > * {
 .card-container {
   min-height: 400px;
   min-width: 300px;
-  background: white;
+  background-image:  linear-gradient(45deg, rgba(255,255,255,0.75), rgba(255,255,255,0.75));
   text-decoration: none;
   color: #444;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);

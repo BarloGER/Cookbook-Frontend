@@ -19,6 +19,7 @@ select {
   padding: 6px 10px;
   margin: 10px 0px;
   border: 1px solid #ddd;
+  border-radius: 5px;
   box-sizing: border-box;
   display: block;
 }
@@ -37,6 +38,8 @@ button {
   width: 50px;
   height: 50px;
   border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #f13;
 }
 
 .terms {

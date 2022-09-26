@@ -4,7 +4,7 @@
   align-items: center;
   height: 60px;
   padding: 0.5rem 0rem;
-  background-color: #94b49f;
+  background-color: #afafaf;
   color: black;
   border-radius: 25px;
   box-shadow: 0 2px 10px rgb(0 0 0 / 10%), 0 10px 15px rgb(0 0 0 / 20%);
@@ -13,13 +13,14 @@
 
 .brand-name {
   text-decoration: none;
-  color: black;
-  font-size: 1.3rem;
+  color: white;
+  font-family: 'Gabriola', cursive;
+  font-size: 1.7rem;
   margin-left: 1rem;
 }
 
 a {
-  color: #94b49f;
+  color: white;
 }
 
 .navigation-menu {
@@ -69,11 +70,11 @@ a {
 }
 
 .hamburger:hover {
-  background-color: #cee5d0;
+  background-color: #97C8EB;
 }
 
 .active {
-  color: green;
+  color: black;
   list-style-type: none;
 }
 
